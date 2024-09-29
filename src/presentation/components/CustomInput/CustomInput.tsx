@@ -25,6 +25,7 @@ const CustomInput: React.FC<CustomInputProps> = ({
         value={value}
         keyboardType={keyboardType}
         style={styles.input}
+        placeholderTextColor={'#ccc'}
       />
     </View>
   );
