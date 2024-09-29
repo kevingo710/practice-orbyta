@@ -1,9 +1,9 @@
-import {Platform} from 'react-native';
+import {Text} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import React from 'react';
 
-import ExampleTwoScreen from '../presentation/screens/ExampleTwoScreen';
-import ExampleOneScreen from '../presentation/screens/ExampleOneScreen';
+import ExampleTwoScreen from '../presentation/screens/exampleTwo/ExampleTwoScreen';
+import ExampleOneScreen from '../presentation/screens/exampleOne/ExampleOneScreen';
 
 const Navigator = () => {
   const Tab = createBottomTabNavigator();
@@ -12,12 +12,24 @@ const Navigator = () => {
     <Tab.Navigator
       initialRouteName="ExampleOne">
       <Tab.Screen
-        name="ExampleOne"
+        name="One"
         component={ExampleOneScreen}
+        options={{
+          tabBarLabel: 'One',
+          tabBarIcon: () => (
+            <Text> ⏳ </Text>
+          ),
+        }}
       />
       <Tab.Screen
-        name="ExampleTwo"
+        name="Two"
         component={ExampleTwoScreen}
+        options={{
+          tabBarLabel: 'Two',
+          tabBarIcon: () => (
+            <Text> 🍺 </Text>
+          ),
+        }}
       />
    
     </Tab.Navigator>
